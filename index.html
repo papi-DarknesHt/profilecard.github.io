@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --drak-gray:hsl(0, 0%, 59%);
+    }
+    .attribution { font-size: 11px; text-align: center;
+      margin-bottom: 40px;
+    z-index: 1; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(185, 75%, 39%);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    *{margin: 0;}
+    .circle1{
+      position: absolute;
+      float: left;
+      top: 0;
+      left: -30%;
+      top: -70%;
+    }
+    .circle2{
+      position: absolute;
+      float: right;
+      right: -30%;
+      bottom: -80%;
+    }
+    .img{
+      width: 100%;
+      height: 100vh;  
+      position: absolute;
+      overflow: hidden;
+    }
+    .container{
+      width: 25%;
+      height: 55%;
+      margin: auto;
+      background-color: white;
+      z-index: 1;
+      border-radius: 10px ;
+      overflow: hidden;
+    }
+    .container section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .head-container{
+      width: 100%;
+      display: block;
+    }
+    .picture{
+      width: 5%;
+      position: absolute;
+      top: 37%;
+      left: 47.5%;
+      border-radius: 50%;
+      margin-bottom: 0;
+    }
+    .body-container-header{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 0.5px solid var(--drak-gray);
+      padding: 20px;
+    }
+    .body-container-header h1{
+      padding: 0px 0px 10px 0px;
+    }
+    .gray{
+      color: var(--drak-gray);
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: 400;
+    }
+    .body-container-body{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 10%;
+    }
+    .name{
+      font-size: 18px;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: 700;
+    }
+    @media only screen and (max-width:375px){
+      body{
+        background-color: hsl(185, 75%, 39%);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .container{
+        width: 90%;
+        min-width: 90%;
+        height: 55%;
+        min-height: 55%;
+        margin: auto;
+        background-color: white;
+        z-index: 1;
+        border-radius: 10px ;
+        overflow: hidden;
+      }
+      .circle1{
+        position: absolute;
+        float: left;
+        left: -700px;
+        top: -650px;
+      }
+      .circle2{
+        position: absolute;
+        float: right;
+        right: -680px;
+        bottom: -650px;
+      }
+      .img{
+        width: 100%;
+        height: 100vh;  
+        position: absolute;
+        overflow: hidden;
+      }
+      .picture{
+        width: 20%;
+        min-width: 20%;
+        position: absolute;
+        top: 37%;
+        left: 41%;
+        border-radius: 50%;
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="img">
+    <img src="images/bg-pattern-top.svg" alt="circle"class="circle1">
+    <img src="images/bg-pattern-bottom.svg" alt="circle"class="circle2">
+  </div>
+  <main class="container"> 
+    <aside class="head-container"> 
+      <img src="images/bg-pattern-card.svg" alt="pattern" >
+    </aside> 
+    <img src="images/image-victor.jpg" alt="photo" class="picture">
+    <section class="body-container">
+      <article class="body-container-header">
+        <h1 class="name">Victor Crest <span class="gray">26</span></h1>
+        <p class="gray">London</p>
+      </article>
+      <article class="body-container-body">
+        <aside>
+          <p class="name"> 80K</p>
+          <p class="gray">Followers</p>
+        </aside>
+        <aside>
+          <p class="name">803K</p>
+          <p class="gray">Likes</p>
+        </aside>
+        <aside>
+          <p class="name">1.4K</p>
+        <p class="gray">Photos</p>
+        </article>
+    </section>      
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/papi-DarknesHt" target="d">papi-Darkness</a>.
+  </div>
+</body>
+</html>
